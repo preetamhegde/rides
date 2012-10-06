@@ -1,0 +1,57 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddColumnToUsers	db/migrate/20120929133144_add_column_to_users.rb	/^class AddColumnToUsers < ActiveRecord::Migration$/;"	c
+AddColumnsToUser	db/migrate/20121003115904_add_columns_to_user.rb	/^class AddColumnsToUser < ActiveRecord::Migration$/;"	c
+AddColumnsToUsers	db/migrate/20120929125239_add_columns_to_users.rb	/^class AddColumnsToUsers < ActiveRecord::Migration$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Rides
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+BrowsingTest	test/performance/browsing_test.rb	/^class BrowsingTest < ActionDispatch::PerformanceTest$/;"	c
+CreateRides	db/migrate/20120925090238_create_rides.rb	/^class CreateRides < ActiveRecord::Migration$/;"	c
+DeviseCreateUsers	db/migrate/20120927090209_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration$/;"	c
+RemoveProviderFromUsers	db/migrate/20121003100508_remove_provider_from_users.rb	/^class RemoveProviderFromUsers < ActiveRecord::Migration$/;"	c
+RemoveUidFromUsers	db/migrate/20121003100537_remove_uid_from_users.rb	/^class RemoveUidFromUsers < ActiveRecord::Migration$/;"	c
+RenameColumnInRides	db/migrate/20121001160620_rename_column_in_rides.rb	/^class RenameColumnInRides < ActiveRecord::Migration$/;"	c
+Ride	app/models/ride.rb	/^class Ride < ActiveRecord::Base$/;"	c
+RideTest	test/unit/ride_test.rb	/^class RideTest < ActiveSupport::TestCase$/;"	c
+Rides	config/application.rb	/^module Rides$/;"	m
+RidesController	app/controllers/rides_controller.rb	/^class RidesController < ApplicationController$/;"	c
+RidesControllerTest	test/functional/rides_controller_test.rb	/^class RidesControllerTest < ActionController::TestCase$/;"	c
+RidesHelper	app/helpers/rides_helper.rb	/^module RidesHelper$/;"	m
+RidesHelperTest	test/unit/helpers/rides_helper_test.rb	/^class RidesHelperTest < ActionView::TestCase$/;"	c
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UserTest	test/unit/user_test.rb	/^class UserTest < ActiveSupport::TestCase$/;"	c
+Users	app/controllers/users/omniauth_callbacks_controller.rb	/^class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController$/;"	c
+after_sign_in_path_for	app/controllers/application_controller.rb	/^  def after_sign_in_path_for(resource)$/;"	f	class:ApplicationController
+change	db/migrate/20120925090238_create_rides.rb	/^  def change$/;"	f	class:CreateRides
+change	db/migrate/20120929125239_add_columns_to_users.rb	/^  def change$/;"	f	class:AddColumnsToUsers
+change	db/migrate/20120929133144_add_column_to_users.rb	/^  def change$/;"	f	class:AddColumnToUsers
+change	db/migrate/20121003115904_add_columns_to_user.rb	/^  def change$/;"	f	class:AddColumnsToUser
+create	app/controllers/rides_controller.rb	/^  def create$/;"	f	class:RidesController
+destroy	app/controllers/rides_controller.rb	/^  def destroy$/;"	f	class:RidesController
+down	db/migrate/20120927090209_devise_create_users.rb	/^  def self.down$/;"	F	class:DeviseCreateUsers
+down	db/migrate/20121001160620_rename_column_in_rides.rb	/^  def down$/;"	f	class:RenameColumnInRides
+down	db/migrate/20121003100508_remove_provider_from_users.rb	/^  def down$/;"	f	class:RemoveProviderFromUsers
+down	db/migrate/20121003100537_remove_uid_from_users.rb	/^  def down$/;"	f	class:RemoveUidFromUsers
+edit	app/controllers/rides_controller.rb	/^  def edit$/;"	f	class:RidesController
+facebook	app/controllers/users/omniauth_callbacks_controller.rb	/^  def facebook$/;"	f	class:Users
+find_for_facebook_oauth	app/models/user.rb	/^  def self.find_for_facebook_oauth(auth, signed_in_resource=nil)$/;"	F	class:User
+index	app/controllers/rides_controller.rb	/^  def index$/;"	f	class:RidesController
+new	app/controllers/rides_controller.rb	/^  def new$/;"	f	class:RidesController
+new_with_session	app/models/user.rb	/^  def self.new_with_session(params, session)$/;"	F	class:User
+passthru	app/controllers/users/omniauth_callbacks_controller.rb	/^  def passthru$/;"	f	class:Users
+post_to_facebook	app/helpers/rides_helper.rb	/^  def post_to_facebook(data)$/;"	f	class:RidesHelper
+search	app/controllers/rides_controller.rb	/^  def search$/;"	f	class:RidesController
+search_rides	app/controllers/rides_controller.rb	/^  def search_rides$/;"	f	class:RidesController
+show	app/controllers/rides_controller.rb	/^  def show$/;"	f	class:RidesController
+test_homepage	test/performance/browsing_test.rb	/^  def test_homepage$/;"	f	class:BrowsingTest
+up	db/migrate/20120927090209_devise_create_users.rb	/^  def self.up$/;"	F	class:DeviseCreateUsers
+up	db/migrate/20121001160620_rename_column_in_rides.rb	/^  def up$/;"	f	class:RenameColumnInRides
+up	db/migrate/20121003100508_remove_provider_from_users.rb	/^  def up$/;"	f	class:RemoveProviderFromUsers
+up	db/migrate/20121003100537_remove_uid_from_users.rb	/^  def up$/;"	f	class:RemoveUidFromUsers
+update	app/controllers/rides_controller.rb	/^  def update$/;"	f	class:RidesController

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  from: MyString
+  to: MyString
+  depart_date: 2012-09-25 14:32:38
+  return_date: 2012-09-25 14:32:38
+  preferences: MyString
+  who: MyString
+
+two:
+  from: MyString
+  to: MyString
+  depart_date: 2012-09-25 14:32:38
+  return_date: 2012-09-25 14:32:38
+  preferences: MyString
+  who: MyString

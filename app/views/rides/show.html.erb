@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>From:</b>
+  <%= @ride.source %>
+</p>
+
+<p>
+  <b>To:</b>
+  <%= @ride.destination %>
+</p>
+
+<p>
+  <b>Depart date:</b>
+  <%= @ride.depart_date %>
+</p>
+
+<p>
+  <b>Return date:</b>
+  <%= @ride.return_date %>
+</p>
+
+<p>
+  <b>Preferences:</b>
+  <%= @ride.preferences %>
+</p>
+
+<p>
+  <b>Who:</b>
+  <%= @ride.who %>
+</p>
+
+
+<%= link_to 'Edit', edit_ride_path(@ride) %> |
+<%= link_to 'Back', rides_path %>

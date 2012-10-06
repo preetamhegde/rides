@@ -1,0 +1,23 @@
+<%= form_for @search, :url => search_rides_rides_path, :html => {:method => :get} do |f| %>
+
+  <div class="field">
+    <%= f.label :from %><br />
+    <%= f.text_field :source_contains %>
+  </div>
+  <div class="field">
+    <%= f.label :to %><br />
+    <%= f.text_field :destination_contains %>
+  </div>
+  <div class="field">
+    <%= f.label :depart_date %><br />
+    <%= f.datetime_select :depart_date_eq, :include_blank => true %>
+  </div>
+  <div class="field">
+    <%= f.label :return_date %><br />
+    <%= f.datetime_select :return_date_eq, :include_blank => true %>
+  </div>
+  <div class="actions">
+    <%= submit_tag 'Search' %>
+  </div>
+<% end %>
+

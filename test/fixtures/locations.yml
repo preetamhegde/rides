@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ride_id: 1
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
+  location_type: MyString
+
+two:
+  ride_id: 1
+  address: MyString
+  latitude: 1.5
+  longitude: 1.5
+  location_type: MyString

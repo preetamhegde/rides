@@ -54,6 +54,7 @@ GEM
       json
       rack-oauth2 (>= 0.14.4)
       tzinfo
+    geocoder (1.1.4)
     hashie (1.2.0)
     hike (1.2.1)
     httpauth (0.2.0)
@@ -160,6 +161,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise (= 2.1.2)
   fb_graph
+  geocoder
   jquery-rails
   json
   meta_search

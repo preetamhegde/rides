@@ -44,10 +44,12 @@ class RidesController < ApplicationController
   # POST /rides
   # POST /rides.json
   def create
-    @ride = Ride.new(params[:ride])
+    @ride = current_user.rides.build(params[:ride])
 
     respond_to do |format|
       if @ride.save
+        @ride.locations.create(:address => params[:ride][:source], :location_type => "source")
+        @ride.locations.create(:address => params[:ride][:destination], :location_type => "destination")
         notice = post_to_facebook(params[:ride]) if params[:post_to_facebook]
         format.html { redirect_to @ride, :notice => "Ride was successfully created. #{notice}" }
         format.json { render :json => @ride, :status => :created, :location => @ride }

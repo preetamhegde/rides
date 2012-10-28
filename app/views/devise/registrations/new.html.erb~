@@ -1,0 +1,39 @@
+<div data-role="header" data-position="inline">
+<h1 style="margin:.9em .6em .6em .6em;text-align:left;">
+<p style="clear:both;">Ride</p>
+</h1> 
+</div>
+<h2>Sign up</h2>
+<br>
+
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+    <%= f.email_field :email %></div>
+
+  <div><%= f.label :password %><br />
+    <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.label :name %><br /> 
+    <%= f.email_field :name %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+<div data-role="footer" data-position="inline" style="padding:0px 0 10px 0px">
+		<span class="home-ico"><%= link_to "Home", root_path %></span>
+               	<span class="search-ico"><%= link_to "", search_rides_path,:class=>'search-ico' %> </span>
+                <span class="add-ico">Add Ride</span>
+                <span class="browse-ico">Browse</span>
+				
+                <p style="clear:both"></p>
+</div>
+
+## <%= link_to "Search", search_rides_path,:class => 'search-ico' %>
+##link above shows how to add class

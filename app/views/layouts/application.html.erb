@@ -2,6 +2,13 @@
 <html>
   <head>
     <title>Rides</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>jQuery Mobile: Theme Download</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+    <%= stylesheet_link_tag    "style", :media => "all" %>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
@@ -16,10 +23,10 @@
         <%= link_to "Sign in", new_user_session_path %>
       <% end %>
       <%= link_to "Connect with Facebook", user_omniauth_authorize_path(:facebook) unless session[:fb_access_token] %>
-      <div style = 'float:right'>
-        <%= link_to "Home", root_path %> |  
-        <%= link_to "Search", search_rides_path %>
-      </div>
+      <!--<div style = 'float:right'>
+        <%= #link_to "Home", root_path %> |  
+        <%= #link_to "Search", search_rides_path %>
+      </div>-->
     </div>
 
     <%= yield %>

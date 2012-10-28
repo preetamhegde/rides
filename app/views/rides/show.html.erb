@@ -30,8 +30,8 @@
   <%= @ride.who %>
 </p>
 
-<% source = @ride.locations.where(:location_type => 'source').first%>
-<% destination = @ride.locations.where(:location_type => 'destination').first%>
+<% source = @ride.sources.first%>
+<% destination = @ride.destinations.first%>
 
 <p>
 <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?path=color:0xff0000ff%7Cweight:5%7C#{source.latitude},#{source.longitude}%7C#{destination.latitude},#{destination.longitude}&size=450x300&sensor=false&markers=#{source.latitude},#{source.longitude}&markers=#{destination.latitude},#{destination.longitude}" %>

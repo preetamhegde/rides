@@ -23,10 +23,10 @@
         <%= link_to "Sign in", new_user_session_path %>
       <% end %>
       <%= link_to "Connect with Facebook", user_omniauth_authorize_path(:facebook) unless session[:fb_access_token] %>
-      <!--<div style = 'float:right'>
-        <%= #link_to "Home", root_path %> |  
-        <%= #link_to "Search", search_rides_path %>
-      </div>-->
+      <div style = 'float:right'>
+        <%# <%= link_to "Home", root_path %> |  
+        <%# <%= link_to "Search", search_rides_path %>
+      </div>
     </div>
 
     <%= yield %>

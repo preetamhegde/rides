@@ -9,6 +9,11 @@ Rides::Application.routes.draw do
       get 'search'
       get 'search_rides'
     end
+
+    member do
+      get 'look_to_hook_on'
+      post 'hook_on'
+    end
   end
 
   match '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'

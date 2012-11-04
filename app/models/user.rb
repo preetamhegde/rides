@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :rides
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :name, :provider, :uid
+  attr_accessible :email, :password, :password_confirmation, :name, :provider, :uid, :phone, :address
   # attr_accessible :title, :body
   #
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)

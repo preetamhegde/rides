@@ -24,6 +24,7 @@
     <td><%= link_to 'Show', ride %></td>
     <td><%= link_to 'Edit', edit_ride_path(ride) %></td>
     <td><%= link_to 'Destroy', ride, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+    <td><%= link_to 'Hook On!', look_to_hook_on_ride_path(ride) if ride.seat_available? %></td>
   </tr>
 <% end %>
 </table>

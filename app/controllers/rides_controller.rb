@@ -1,7 +1,8 @@
 class RidesController < ApplicationController
   include RidesHelper
 
-  before_filter :authenticate_user!, :except => [:index, :show, :search, :search_rides, :new]
+  before_filter :authenticate_user!, :except => [:index, :show, :search, :search_rides, :new, :hook_on, :look_to_hook_on]
+  before_filter :seat_available?, :only => [:hook_on]
   # GET /rides
   # GET /rides.json
   def index
@@ -99,6 +100,36 @@ class RidesController < ApplicationController
     respond_to do |format|
       format.html {render :action => 'index'}
       format.json { render :json => @rides }
+    end
+  end
+
+  def look_to_hook_on
+    @ride = Ride.find(params[:id])
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render :json => @ride }
+    end
+  end
+
+  def hook_on
+    @ride = Ride.find(params[:id])
+    @ride.riders.create({:name => params[:name], :phone => params[:phone], :address => params[:address]})
+    @ride.update_attribute(:seats, @ride.seats-1 )
+    respond_to do |format|
+      format.html { render :text => "Name: #{@ride.user.name}, Contact Number: #{@ride.user.phone}", :layout => true }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+
+  def seat_available?
+    @ride = Ride.find(params[:id])
+    unless @ride.seat_available?
+      respond_to do |format|
+        format.html { redirect_to root_url, :notice => "Sorry! Seats not available", :status => 404 }
+        format.json { head :no_content }
+      end
     end
   end
 end

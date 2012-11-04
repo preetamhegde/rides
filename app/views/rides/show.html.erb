@@ -21,6 +21,12 @@
 </p>
 
 <p>
+  <b>Available Seats:</b>
+  <%= @ride.seats %>
+</p>
+
+
+<p>
   <b>Preferences:</b>
   <%= @ride.preferences %>
 </p>
@@ -42,5 +48,28 @@
 <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?path=color:0xff0000ff%7Cweight:5%7C#{source.latitude},#{source.longitude}%7C#{destination.latitude},#{destination.longitude}&size=450x300&sensor=false&markers=#{source.latitude},#{source.longitude}&markers=#{destination.latitude},#{destination.longitude}" %>
 </p>
 
+<p>
+<b> Interested Riders </b>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Contact Number</th>
+    <th>Address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @ride.riders.each do |rider| %>
+    <tr>
+      <td><%= rider.name %></td>
+      <td><%= rider.phone %></td>
+      <td><%= rider.address %></td>
+    </tr>
+  <% end %>
+</table>
+</p>
+
 <%= link_to 'Edit', edit_ride_path(@ride) %> |
-<%= link_to 'Back', rides_path %>
+<%= link_to 'Back', rides_path %> |
+<%= link_to 'Hook On!', look_to_hook_on_ride_path(@ride) if @ride.seat_available? %>

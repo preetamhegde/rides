@@ -1,0 +1,19 @@
+<%= form_tag(hook_on_ride_path(@ride)) do %>
+
+  <div class="field">
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name %>
+  </div>
+  <div class="field">
+    <%= label_tag :contact_number %><br />
+    <%= text_field_tag :phone %>
+  </div>
+  <div class="field">
+    <%= label_tag :address %><br />
+    <%= text_field_tag :address %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "Hook On!" %>
+  </div>
+<% end %>

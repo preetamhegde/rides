@@ -34,6 +34,11 @@
 <% destination = @ride.destinations.first%>
 
 <p>
+<b> Approximate distance: </b>
+<%= "#{(source.distance_to(destination). * 1.6).round(2) } kms" %>
+</p>
+
+<p>
 <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?path=color:0xff0000ff%7Cweight:5%7C#{source.latitude},#{source.longitude}%7C#{destination.latitude},#{destination.longitude}&size=450x300&sensor=false&markers=#{source.latitude},#{source.longitude}&markers=#{destination.latitude},#{destination.longitude}" %>
 </p>
 

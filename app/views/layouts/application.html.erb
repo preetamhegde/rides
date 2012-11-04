@@ -22,7 +22,7 @@
         <%= link_to "Sign up", new_user_registration_path %> or
         <%= link_to "Sign in", new_user_session_path %>
       <% end %>
-      <%= link_to "Connect with Facebook", user_omniauth_authorize_path(:facebook) unless session[:fb_access_token] %>
+      <%= link_to("Connect with Facebook", user_omniauth_authorize_path(:facebook), "data-ajax" => false) unless session[:fb_access_token] %>
       <div style = 'float:right'>
          <%= link_to "Home", root_path %> |  
          <%= link_to "Search", search_rides_path %>

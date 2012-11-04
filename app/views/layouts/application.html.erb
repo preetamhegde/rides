@@ -2,41 +2,41 @@
 <html>
   <head>
     <title>Rides</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>jQuery Mobile: Theme Download</title>
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css" />
-		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery Mobile: Theme Download</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile.structure-1.1.1.min.css" />
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
     <%= stylesheet_link_tag    "style", :media => "all" %>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
-  	<body>
-		<div data-role="page" data-theme="a">
-			<div data-role="header" data-position="inline">
-				<h1 style="margin:.9em .6em .6em .6em;text-align:left;">
-                    <p style="clear:both;"></p>
-                </h1> 
-			</div>
-
-    <div id="user_nav" data-role="content">
-      <% if user_signed_in? %>
-        Signed in as <%= current_user.email %>. Not you?
-        <%= link_to "Sign out", destroy_user_session_path %>
-      <% else %>
-        <%= link_to "Sign up", new_user_registration_path %> or
-        <%= link_to "Sign in", new_user_session_path %>
-      <% end %>
-      <%= link_to("Connect with Facebook", user_omniauth_authorize_path(:facebook), "data-ajax" => false) unless session[:fb_access_token] %>
-      <div style = 'float:right' data-role="content">
-         <%= link_to "Home", root_path %> |  
-         <%= link_to "Search", search_rides_path %>
+  <body>
+    <div data-role="page" data-theme="a">
+      <div data-role="header" data-position="inline">
+        <h1 style="margin:.9em .6em .6em .6em;text-align:left;">
+          <p style="clear:both;"></p>
+        </h1> 
       </div>
-    </div>
 
-    <%= yield %>
-</div>
+      <div id="user_nav" data-role="content">
+        <% if user_signed_in? %>
+          Signed in as <%= current_user.email %>. Not you?
+          <%= link_to "Sign out", destroy_user_session_path %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path %> or
+          <%= link_to "Sign in", new_user_session_path %>
+        <% end %>
+        <%= link_to("Connect with Facebook", user_omniauth_authorize_path(:facebook), "data-ajax" => false) unless session[:fb_access_token] %>
+        <div style = 'float:right' data-role="content">
+          <%= link_to "Home", root_path %> |  
+          <%= link_to "Search", search_rides_path %>
+        </div>
+      </div>
+
+      <%= yield %>
+    </div>
   </body>
 </html>

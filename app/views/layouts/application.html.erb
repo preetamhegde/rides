@@ -13,8 +13,15 @@
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
-    <div id="user_nav">
+  	<body>
+		<div data-role="page" data-theme="a">
+			<div data-role="header" data-position="inline">
+				<h1 style="margin:.9em .6em .6em .6em;text-align:left;">
+                    <p style="clear:both;"></p>
+                </h1> 
+			</div>
+
+    <div id="user_nav" data-role="content">
       <% if user_signed_in? %>
         Signed in as <%= current_user.email %>. Not you?
         <%= link_to "Sign out", destroy_user_session_path %>
@@ -23,13 +30,13 @@
         <%= link_to "Sign in", new_user_session_path %>
       <% end %>
       <%= link_to("Connect with Facebook", user_omniauth_authorize_path(:facebook), "data-ajax" => false) unless session[:fb_access_token] %>
-      <div style = 'float:right'>
+      <div style = 'float:right' data-role="content">
          <%= link_to "Home", root_path %> |  
          <%= link_to "Search", search_rides_path %>
       </div>
     </div>
 
     <%= yield %>
-
+</div>
   </body>
 </html>

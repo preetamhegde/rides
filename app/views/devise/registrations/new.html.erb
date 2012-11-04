@@ -1,42 +1,57 @@
-<div data-role="header" data-position="inline">
-<h1 style="margin:.9em .6em .6em .6em;text-align:left;">
-<p style="clear:both;">Ride</p>
-</h1> 
-</div>
-<h2>Sign up</h2>
-<br>
+
+				    <div data-role="content">
 
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), "data-ajax" => false) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :emailx %><br />
+<div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+
+  <div><%= f.label :email %><br />
     <%= f.email_field :email %></div>
+</fieldset>
+        </div>
+
+<div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
 
   <div><%= f.label :password %><br />
     <%= f.password_field :password %></div>
+</fieldset>
+        </div>
+
+
+<div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
 
   <div><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.label :name %><br /> 
-    <%= f.text_field :name %></div>
+</fieldset>
+        </div>
 
-  <div><%= f.label :phone %><br /> 
-    <%= f.text_field :phone%></div>
+<div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+
+  <div><%= f.label :name %><br /> 
+    <%= f.email_field :name %></div>
+
+</fieldset>
+        </div>
+
+<div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
 
   <div><%= f.submit "Sign up" %></div>
+</fieldset>
+        </div>
+
+
 <% end %>
 
 <%= render "devise/shared/links" %>
-<div data-role="footer" data-position="inline" style="padding:0px 0 10px 0px">
-		<span class="home-ico"><%= link_to "Home", root_path %></span>
-               	<span><%= link_to "", search_rides_path,:class=>'search-ico' %> </span>
-                <span class="add-ico">Add Ride</span>
-                <span class="browse-ico">Browse</span>
-				
-                <p style="clear:both"></p>
+
 </div>
 
-## <%= link_to "Search", search_rides_path,:class => 'search-ico' %>
-##link above shows how to add class
+

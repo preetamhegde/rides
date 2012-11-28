@@ -1,6 +1,6 @@
 Rides::Application.routes.draw do
 
-  root :to => 'rides#index'
+  root :to => "rides#index"
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 

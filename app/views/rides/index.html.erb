@@ -1,34 +1,15 @@
-<h1>Listing rides</h1>
+<div data-role='header'>
+  <h1>Rides</h1>
+  <%= link_to 'Add', new_ride_path, "data-icon" => "plus", "class" => "ui-btn-right", "data-iconpos"=>"notext" %>
+</div>
 
-<table>
-  <tr>
-    <th>From</th>
-    <th>To</th>
-    <th>Depart date</th>
-    <th>Return date</th>
-    <th>Preferences</th>
-    <th>Who</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @rides.each do |ride| %>
-  <tr>
-    <td><%= ride.source %></td>
-    <td><%= ride.destination %></td>
-    <td><%= ride.depart_date %></td>
-    <td><%= ride.return_date %></td>
-    <td><%= ride.preferences %></td>
-    <td><%= ride.who %></td>
-    <td><%= link_to 'Show', ride %></td>
-    <td><%= link_to 'Edit', edit_ride_path(ride) %></td>
-    <td><%= link_to 'Destroy', ride, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
-    <td><%= link_to 'Hook On!', look_to_hook_on_ride_path(ride) if ride.seat_available? %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Ride', new_ride_path %>
+<div data-role='content'>
+  <ul data-role='listview'>
+    <% @rides.each do |ride| %>
+      <li>
+      <%= link_to ride.title, ride %>
+      <%= link_to 'Edit', edit_ride_path(ride), "data-icon" => "gear" %>
+      </li>
+    <% end %>
+  </ul>
+</div>

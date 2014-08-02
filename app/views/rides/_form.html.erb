@@ -4,9 +4,9 @@
       <h2><%= pluralize(@ride.errors.count, "error") %> prohibited this ride from being saved:</h2>
 
       <ul>
-      <% @ride.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @ride.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -26,11 +26,11 @@
   </div>
   <div class="field">
     <%= f.label :depart_date %><br />
-    <%= f.datetime_select :depart_date %>
+    <%= f.text_field :depart_date, :id => "datetimepicker"%>
   </div>
   <div class="field">
     <%= f.label :return_date %><br />
-    <%= f.datetime_select :return_date %>
+    <%= f.text_field :return_date, :id => "datetimepicker2" %>
   </div>
   <div class="field">
     <%= f.label :seats %><br />
@@ -55,8 +55,9 @@
       <%= check_box_tag :post_to_facebook %>
     </div>
   <% end %>
-
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+<script>$('#datetimepicker').datetimepicker();</script>
+<script>$('#datetimepicker2').datetimepicker();</script>

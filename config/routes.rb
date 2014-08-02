@@ -7,7 +7,7 @@ Rides::Application.routes.draw do
   resources :rides do
     collection do
       get 'search'
-      get 'search_rides'
+      post 'search_rides'
     end
 
     member do

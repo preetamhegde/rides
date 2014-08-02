@@ -1,4 +1,4 @@
-<%= form_for @search, :url => search_rides_rides_path, :html => {:method => :get} do |f| %>
+<%= form_for @search, :url => search_rides_rides_path, :html => {:method => :post} do |f| %>
 
   <div class="field">
     <%= f.label :from %><br />
@@ -10,14 +10,15 @@
   </div>
   <div class="field">
     <%= f.label :depart_date %><br />
-    <%= f.datetime_select :depart_date_eq, :include_blank => true %>
+    <%= f.text_field :depart_date_eq, :include_blank => true , :id => "datetimepicker3"%>
   </div>
   <div class="field">
     <%= f.label :return_date %><br />
-    <%= f.datetime_select :return_date_eq, :include_blank => true %>
+    <%= f.text_field :depart_date_eq, :include_blank => true , :id => "datetimepicker4"%>
   </div>
   <div class="actions">
     <%= submit_tag 'Search' %>
   </div>
 <% end %>
-
+<script>$('#datetimepicker3').datetimepicker();</script>
+<script>$('#datetimepicker4').datetimepicker();</script>

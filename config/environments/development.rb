@@ -43,8 +43,8 @@ Rides::Application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587, 
     :domain               => 'baci.lindsaar.net',
-    :user_name            => 'nsready@gmail.com',
-    :password             => 'rajisumanth',
+    :user_name            => 'youremail',
+    :password             => '*******',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
 
